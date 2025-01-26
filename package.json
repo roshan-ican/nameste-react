@@ -1,0 +1,19 @@
+{
+  "name": "nameste-react",
+  "version": "1.0.0",
+  "description": "This is roshan learning react",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "roshan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshansharma/nameste-react/issues"
+  },
+  "homepage": "https://github.com/roshansharma/nameste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
