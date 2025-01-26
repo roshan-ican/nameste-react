@@ -73,3 +73,7 @@ coverage/
 
 # Debug output
 debug.log
+
+#parcel cache
+.parcel-cache
+

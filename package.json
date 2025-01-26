@@ -2,7 +2,6 @@
   "name": "nameste-react",
   "version": "1.0.0",
   "description": "This is roshan learning react",
-  "main": "App.js",
   "scripts": {
     "test": "jest"
   },
@@ -14,6 +13,16 @@
   },
   "homepage": "https://github.com/roshansharma/nameste-react#readme",
   "devDependencies": {
-    "parcel": "^2.13.3"
-  }
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions"
+  ]
 }
