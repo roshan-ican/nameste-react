@@ -4,6 +4,8 @@ import { useContext } from "react";
 import UserContext from "../utils/UserContext";
 
 const RestaurantCard = ({ resData }) => {
+    
+    // console.log(resData, "_what_is_this_data")
     const {
         cloudinaryImageId,
         name,
@@ -19,7 +21,7 @@ const RestaurantCard = ({ resData }) => {
     const { loggedInUser } = data;
 
     return (
-        <div className="w-[250px] h-[400px] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-200 cursor-pointer hover:scale-105">
+        <div data-testid="resCard" className="w-[250px] h-[400px] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-200 cursor-pointer hover:scale-105">
             <Link
                 to={`/restaurants/${id}`}
                 className="block w-full h-full"

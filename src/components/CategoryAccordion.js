@@ -9,7 +9,7 @@ const CategoryAccordion = ({ title, items, isOpen, onToggle }) => {
     };
 
     return (
-        <div className="mb-6 border-b">
+        <div data-testid="foodItems" className="mb-6 border-b">
             <button
                 className="w-full text-left py-4 flex justify-between items-center text-red-600 text-2xl font-semibold border border-red-500 shadow-lg"
                 onClick={onToggle}

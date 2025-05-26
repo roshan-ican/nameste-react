@@ -21,18 +21,18 @@ const Header = () => {
 
     const data = useContext(UserContext);
 
-    console.log(data, "data")
+    // console.log(data, "data")
     const { loggedInUser } = data;
 
     let btnName = "Login"
-    console.log(btnName, "btnName")
+    // console.log(btnName, "btnName")
 
     const [btnNameReact, setBtnNameReact] = useState("Login")
-    console.log("Header Rendered")
+    // console.log("Header Rendered")
     const onlineStatus = useOnlineStatus();
 
     const cartItems = useSelector((store) => store.cart.items)
-    console.log(cartItems, "cart_items")
+    // console.log(cartItems, "cart_items")
 
 
     return (

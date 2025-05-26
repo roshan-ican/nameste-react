@@ -18,7 +18,7 @@ const Body = () => {
   const restaurantListToRender =
     filterRestaurant.length > 0 ? filterRestaurant : listOfRestaurants;
 
-  console.log(restaurantListToRender, "restaurantListToRender")
+
 
 
   const RestaurantCardWithPromotedLabel = withPromotedLabel(RestaurantCard);
@@ -37,6 +37,7 @@ const Body = () => {
       <div className="filter">
         <div className="search m-2 p-4">
           <input
+            data-testid="searchInput"
             id="ipsearch"
             value={SearchText}
             style={{ marginRight: "10px" }}
@@ -74,16 +75,19 @@ const Body = () => {
             value={loggedInUser.name}
           />
         </div>
+        <div className="search m-2 p-4 flex items-center">
 
-        <button
-          className="filter-btn bbtn"
-          onClick={() => {
-            const filtered = listOfRestaurants.filter((res) => res.info?.avgRating > 4.5);
-            setFilterRestaurant(filtered);
-          }}
-        >
-          Top rated Restaurant
-        </button>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => {
+              const filtered = listOfRestaurants.filter((res) => res.info?.avgRating > 4.5);
+              setFilterRestaurant(filtered);
+            }}
+          >
+            Top Rated
+          </button>
+        </div>
+
       </div>
       <div className="flex flex-wrap justify-center gap-6">
         {restaurantListToRender.map((restaurant, index) => {

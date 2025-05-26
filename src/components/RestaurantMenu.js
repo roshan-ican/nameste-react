@@ -15,7 +15,7 @@ const RestaurantMenu = () => {
   const { name, cuisines, costForTwoMessage } = resInfo.info ?? {};
   const items = resInfo.menu;
 
-  console.log(items, "items__items")
+  // console.log(items, "items__items")
 
   return (
     <div className="menu p-6 max-w-4xl mx-auto">

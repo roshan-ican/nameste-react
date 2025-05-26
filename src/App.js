@@ -15,16 +15,12 @@ import appStore from "./utils/appStore";
 import { Provider } from "react-redux";
 import Cart from "./components/Cart";
 
-
-
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
-    // Move the useState and useEffect inside the component
     const [userName, setUserName] = useState("");
 
     useEffect(() => {
-        // Make an API call to fetch user data
         const data = {
             name: "John Doe",
         }
@@ -33,11 +29,10 @@ const AppLayout = () => {
 
     return (
         <Provider store={appStore}>
-
             <UserContext.Provider value={{
                 loggedInUser: {
                     name: userName,
-                    email: "user@example.com", // Add this to match your context shape
+                    email: "user@example.com",
                 },
                 setUserName: setUserName
             }}>
@@ -94,8 +89,11 @@ const appRouter = createBrowserRouter([
     },
 ]);
 
-// Export the context so it can be imported in other components
-export { UserContext };
+// Export for testing
+export { UserContext, AppLayout, appRouter };
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter} />);
+// Only run in browser environment (not in Jest tests)
+if (typeof document !== 'undefined' && document.getElementById("root")) {
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<RouterProvider router={appRouter} />);
+}

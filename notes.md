@@ -46,3 +46,6 @@
  - jest configuration 
  - npx jest --init
  - installed jsdom library
+ - Installed @babel/preset-react - to make JSX work in test cases
+ - Installed @babel/preset-react inside my babel config
+ - Installed @testing-library/jest-dom
